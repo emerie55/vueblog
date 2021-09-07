@@ -22,6 +22,9 @@ use Inertia\Inertia;
 
 Route::get('/', [PageController::class, 'index'])->name('home');
 Route::get('/About-Us', [PageController::class, 'about'])->name('about');
+Route::get('/Blog-Posts', [PageController::class, 'posts'])->name('posts');
+Route::get('/Make-Post', [PageController::class, 'addposts'])->name('addposts');
+Route::get('/Manage-Categories', [PageController::class, 'categories'])->name('categories');
 
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [
