@@ -5,18 +5,22 @@
         <!-- Navbar -->
         <navbar></navbar>
 
-        <slot></slot>
+        <div class="min-h-screen">
+          <slot></slot>
+        </div>
         
         <!-- Footer -->
-        <footer></footer>
+        <footer-component></footer-component>
     </div>
 </template>
 
 <script>
-import Footer from '../Pages/Include/Footer.vue'
+import FooterComponent from '../Pages/Include/Footer.vue'
 import Navbar from '../Pages/Include/Navbar.vue'
 export default {
-  components: { Navbar, Footer },
-    
+  components: { Navbar, FooterComponent },
+  props:{
+    canPost:Boolean
+  }
 }
 </script>
