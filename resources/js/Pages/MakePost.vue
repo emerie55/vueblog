@@ -18,23 +18,59 @@
             </header>
         </template>
 
-        <div class="px-6 py-2 mb-8 flex w-96">
-            <input type="text" class="flex-grow" v-model="user_input"> 
-            <button class="flex-intitial py-1 px-2 bg-gray-400" @click="addPerson()">Add Person</button>
+   
+        <div class="w-full">
+            <div class="max-w-6xl mx-auto my-20 rounded">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="md:col-span-2">
+                        <div class="w-full bg-gray-100">
+                            <button class="px-3 py-1 rounded-t-lg" :class="isPostMode == true ? 'bg-blue-100':'bg-blue-400'" @click="isPostMode = false">Add Category</button> 
+                            <button class="bg-blue-100 px-3 py-1 rounded-t-lg"  :class="isPostMode == true ? 'bg-blue-400':'bg-blue-100'" @click="isPostMode = true">Add Post</button>
+                        </div>
+                        <form name="frmCategory" v-if="isPostMode == false" @submit.prevent="addCategory()">
+                            <div class="items-center gap-4 bg-gray-400 px-5 py-3">
+                                <div class="mb-3">
+                                    <label for="" class="capitalize block">Category</label>
+                                    <input type="text" v-model="category" required>
+                                </div>
+                                <div>
+                                    <button type="submit" class="px-3 bg-gray-900 text-white rounded">
+                                        Add 
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <form name="frmPost" v-else>
+                            <div class="items-center gap-4 bg-gray-400 px-5 py-3">
+                                <div class="mb-3">
+                                    <label for="" class="capitalize block">Post Title</label>
+                                    <input type="text">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="capitalize block">Post Category</label>
+                                    <select>
+                                        <option value="" selected disabled>Select Post Category</option>
+                                        <option v-for="(cat, i) in categories" :key="i" :value="cat.id"> {{ cat.category }} </option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="capitalize block">Post Content</label>
+                                    <textarea></textarea>
+                                </div>
+                                <div>
+                                    <button class="px-3 bg-gray-900 text-white rounded">
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        sdsdsds
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="w-96">
-            <ul class="">
-                <template  v-if="people.length > 0">
-                    <li class="py-1 px-2 bg-gray-200 hover:bg-gray-300" v-for="(person, i) in people" :key="i" @click="fillInput(person)">{{ person }}</li>
-                </template>
-                <template v-else>
-                    <li class="py-1 px-2 bg-gray-200 hover:bg-gray-300">No Person dey here</li> 
-                </template>
-            </ul>
-        </div>
-
-
 
 
 
@@ -43,23 +79,45 @@
 </template>
 
 <script>
+import axios from 'axios'
 import WebLayout from '../Layouts/WebLayout.vue'
 export default {
     components: { WebLayout },
     data(){
         return {
-            people:[],
-            user_input:''
+            isPostMode:false,
+            category:'',
+            categories:[]
         }
     },
-    methods:{
-        addPerson() {
-            this.people.push(this.user_input);
-            this.user_input = '';
+    methods: {
+        addCategory(){
+            axios.post(route('api.store.category'), { cat: this.category})
+            .then((res) => {
+                if (res.data.status == 'success') {
+                    alert(res.data.msg)
+                    this.category = '';
+                    this.fetchCategory();
+                } else {
+                    alert(res.data.msg)
+                }
+            })
+            .catch((ex) => {
+                console.log(ex);
+            })
         },
-        fillInput(thePerson){
-            this.user_input = thePerson;
+        fetchCategory(){
+            axios.post(route('api.fetch.category'))
+            .then((res) => {
+                this.categories = res.data
+            })
+            .catch((ex) => {
+                console.log(ex);
+            })
         }
+    },
+    mounted(){
+        this.fetchCategory()
     }
 }
 </script>
