@@ -6,3 +6,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+
+
+# Vue3 Devtool for firefox here
+<a href="https://github.com/vuejs/vue-devtools/releases/download/v6.0.0-beta.8/vuejs_devtools_beta-6.0.0.8-an+fx.xpi" target="_blank">Firefox Vue3 Devtool</a>
+
+
+# Vue3 Devtool for Google chrome here
+<a href="https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg" target="_blank">Google Chrome Vue3 Devtool</a>
