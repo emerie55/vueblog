@@ -18,8 +18,6 @@
             </header>
         </template>
 
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempore nemo quidem non laborum eveniet cupiditate modi numquam aliquid iste, ratione recusandae! Omnis esse id quia nostrum similique saepe quod.
         
     </web-layout>
 </template>

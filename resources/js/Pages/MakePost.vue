@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="capitalize block">Post Content</label>
-                                    <textarea></textarea>
+                                    <textarea class="resize-none"></textarea>
                                 </div>
                                 <div>
                                     <button class="px-3 bg-gray-900 text-white rounded">
