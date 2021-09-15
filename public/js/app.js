@@ -35141,7 +35141,7 @@ __webpack_require__.r(__webpack_exports__);
     deleteCat: function deleteCat(cat) {
       var _this3 = this;
 
-      if (confirm('Are sure you want to delete')) {
+      if (confirm('Are sure you want to delete ?')) {
         axios__WEBPACK_IMPORTED_MODULE_0___default().post(route('api.delete.category'), {
           cat: cat
         }).then(function (res) {
@@ -35157,6 +35157,8 @@ __webpack_require__.r(__webpack_exports__);
         })["catch"](function (ex) {
           console.log(ex);
         });
+      } else {
+        alert('Category was not delete');
       }
     },
     addPost: function addPost() {
@@ -35186,6 +35188,23 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (ex) {
         console.log(ex);
       });
+    },
+    deletePost: function deletePost(id) {
+      if (confirm('are you sure you want to delete ?')) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post(route('api.delete.post'), {
+          id: id
+        }).then(function (res) {
+          if (res.data.code == 200) {
+            alert(res.data.msg);
+          }
+
+          if (res.data.code == 500) {
+            alert(res.data.msg);
+          }
+        });
+      } else {
+        alert('Post is safe');
+      }
     }
   },
   mounted: function mounted() {
@@ -39907,7 +39926,7 @@ var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 );
 
 var _hoisted_28 = {
-  "class": "col-span-3 text-gray-800"
+  "class": "col-span-3 text-gray-800 flex justify-between items-center w-full h-full"
 };
 var _hoisted_29 = {
   "class": "text-lg capitalize font-bold"
@@ -39922,6 +39941,7 @@ var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
+var _hoisted_32 = ["onClick"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_font_awesome = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("font-awesome");
 
@@ -40040,11 +40060,20 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           "class": "h-20 rounded-xl border grid grid-cols-4 gap-4 my-4 p-2 shadow-lg",
           key: i,
           value: post.id
-        }, [_hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
+        }, [_hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
         /* TEXT */
         ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.content), 1
         /* TEXT */
-        ), _hoisted_31])])], 8
+        ), _hoisted_31])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+          "class": "text-red-600 cursor-pointer",
+          onClick: function onClick($event) {
+            return $options.deletePost(post.id);
+          }
+        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_font_awesome, {
+          icon: ['far', 'trash-alt']
+        })], 8
+        /* PROPS */
+        , _hoisted_32)])], 8
         /* PROPS */
         , _hoisted_26);
       }), 128

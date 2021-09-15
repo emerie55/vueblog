@@ -78,7 +78,23 @@ class PostController extends Controller
 
     public function fetch_post()
     {
-        $post = Post::all();
+        $post = Post::latest()->get();
         return json_encode($post);
+    }
+
+    public function delete_post(Request $request)
+    {
+        $delete = Post::find($request->id);
+        if ($delete->delete()) {
+            return response()->json([
+                'code' => 200,
+                'msg' => 'Post deleted Successfully'
+            ]);
+        }else {
+            return response()->json([
+                'code' => 500,
+                'msg' => 'Error occured!'
+            ]);
+        }
     }
 }

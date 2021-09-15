@@ -99,11 +99,16 @@
                                 <div class="col-span-1 overflow-hidden bg-gray-500 rounded-lg">
                                     
                                 </div>
-                                <div class="col-span-3 text-gray-800">
-                                    <p class="text-lg capitalize font-bold">{{ post.title }}</p>
-                                    <div class="flex">
-                                        <p>{{ post.content }} </p> 
-                                        <p class="text-sm ml-2 font-bold text-opacity-20 cursor-pointer">Read more ...</p>
+                                <div class="col-span-3 text-gray-800 flex justify-between items-center w-full h-full">
+                                    <div>
+                                        <p class="text-lg capitalize font-bold">{{ post.title }}</p>
+                                        <div class="flex">
+                                            <p>{{ post.content }} </p> 
+                                            <p class="text-sm ml-2 font-bold text-opacity-20 cursor-pointer">Read more ...</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-red-600 cursor-pointer" @click="deletePost(post.id)">
+                                        <font-awesome :icon="['far', 'trash-alt']"/>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +173,7 @@ export default {
             })
         },
         deleteCat(cat){
-            if (confirm('Are sure you want to delete')) {
+            if (confirm('Are sure you want to delete ?')) {
                 axios.post(route('api.delete.category'), {cat: cat})
                 .then((res)=>{
                     if(res.data.code == 200){
@@ -182,6 +187,8 @@ export default {
                 .catch((ex) => {
                     console.log(ex);
                 })
+            }else{
+                alert('Category was not delete')
             }
         },
 
@@ -210,6 +217,22 @@ export default {
                 console.log(ex);
             })
         },
+
+        deletePost(id){
+            if (confirm('are you sure you want to delete ?')) {
+                axios.post(route('api.delete.post'), {id: id})
+                .then((res) =>{
+                    if(res.data.code == 200){
+                        alert(res.data.msg)
+                    }
+                    if(res.data.code == 500){
+                        alert(res.data.msg)
+                    }
+                })
+            }else{
+                alert('Post is safe')
+            }
+        }
 
     },
     mounted(){

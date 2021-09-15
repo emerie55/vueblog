@@ -24,6 +24,7 @@ Route::prefix('category')->group(function () {
 Route::prefix('post')->group(function () {
     Route::post('/add',[PostController::class, 'store_post'])->name('api.store.post');
     Route::post('/fetch',[PostController::class, 'fetch_post'])->name('api.fetch.post');
+    Route::post('/delete',[PostController::class, 'delete_post'])->name('api.delete.post');
 });
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
