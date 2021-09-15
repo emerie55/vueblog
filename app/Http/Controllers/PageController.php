@@ -31,4 +31,9 @@ class PageController extends Controller
     {
         return Inertia::render('MakePost');
     }
+
+    public function login()
+    {
+        return Inertia::render('Auth/Login');
+    }
 }

@@ -20,6 +20,9 @@ use Inertia\Inertia;
 //     return Inertia::render('Home');
 // });
 
+Route::get('/login', [PageController::class, 'login']);
+Route::post('login', [PageController::class, 'login'])->name('login');
+
 Route::get('/', [PageController::class, 'index'])->name('home');
 Route::get('/About-Us', [PageController::class, 'about'])->name('about');
 Route::get('/Contact-Us', [PageController::class, 'about'])->name('contact');
