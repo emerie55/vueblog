@@ -7,12 +7,13 @@ import { InertiaProgress } from '@inertiajs/progress';
 // Font Awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faBasketballBall, faEllipsisH, faHome, faInfoCircle, faLayerGroup, faShareAlt, faStarOfLife, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faComments, faEdit, faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+import { faBasketballBall, faEllipsisH, faHome, faInfoCircle, faKey, faLayerGroup, faLock, faPhoneAlt, faShareAlt, faSignInAlt, 
+    faStarOfLife, faTimes, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faComments, faEdit, faEnvelope, faTrashAlt, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 library.add(faHome, faInfoCircle, faTimes, faComments, faFacebook, faEdit, faLayerGroup, faBasketballBall, 
-    faEllipsisH, faStarOfLife, faShareAlt, faComments, faTrashAlt)
+    faEllipsisH, faStarOfLife, faShareAlt, faComments, faTrashAlt, faUser, faKey, faSignInAlt, faEnvelope, faUserPlus, faLock, faPhoneAlt)
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
