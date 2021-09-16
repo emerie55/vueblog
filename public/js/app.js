@@ -34148,6 +34148,22 @@ __webpack_require__.r(__webpack_exports__);
           method: 'get'
         });
       });
+    },
+    deleteToken: function deleteToken() {
+      var _this2 = this;
+
+      var Headers = {
+        headers: {
+          'Authorization': 'Bearer ' + localStorage.token
+        }
+      };
+      axios__WEBPACK_IMPORTED_MODULE_2___default().post(route('delete_token'), {}, Headers).then(function (res) {
+        if (res.data.status == 'success') {
+          localStorage.removeItem('token');
+
+          _this2.logout();
+        }
+      });
     }
   }
 }));
@@ -34506,9 +34522,10 @@ __webpack_require__.r(__webpack_exports__);
         remember: this.remember == true ? 'on' : ''
       };
       axios.post(route('login'), formData).then(function (res) {
-        console.log(res.data);
+        if (res.data.status == 'success') {
+          localStorage.token = res.data.result.apitoken;
 
-        if (res.data.status == 'success') {// this.$inertia.visit(route('dashboard'));
+          _this.$inertia.visit(route('dashboard'));
         } else {
           alert('An Error occured!');
         }
@@ -37129,7 +37146,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["title"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
-      return _ctx.logout();
+      return _ctx.deleteToken();
     })
   }, " Logout "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])])]);
 }

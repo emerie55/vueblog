@@ -2,7 +2,7 @@
     <div>
         <Head :title="title" />
 
-        <button @click="logout()">
+        <button @click="deleteToken()">
             Logout
         </button>
 
@@ -43,6 +43,20 @@ import axios from 'axios';
                     this.$inertia.visit(route('home'), { method: 'get' });
                 })
             },
+            deleteToken(){
+                let Headers = {
+                    headers : {
+                        'Authorization' : 'Bearer ' + localStorage.token,
+                    }
+                }
+                axios.post(route('delete_token'), {}, Headers)
+                .then((res) => {
+                    if (res.data.status == 'success') {
+                        localStorage.removeItem('token');
+                        this.logout();
+                    }
+                })
+            }
         }
     })
 </script>

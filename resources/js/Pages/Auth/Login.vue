@@ -66,9 +66,9 @@ export default {
             }
             axios.post(route('login'), formData)
             .then(res => {
-                console.log(res.data);
                 if(res.data.status == 'success'){
-                    // this.$inertia.visit(route('dashboard'));
+                    localStorage.token = res.data.result.apitoken;
+                    this.$inertia.visit(route('dashboard'));
                 }else{
                     alert('An Error occured!')
                 }
