@@ -40,7 +40,7 @@ import axios from 'axios';
             logout() {
                 axios.post(route('logout'))
                 .then(() => {
-                    window.location.href = route('home')
+                    this.$inertia.visit(route('home'), { method: 'get' });
                 })
             },
         }

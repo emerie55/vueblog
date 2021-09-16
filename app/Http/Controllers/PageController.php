@@ -44,10 +44,10 @@ class PageController extends Controller
             'password' => ['required', 'string'],
         ]);
 
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
             $request->session()->regenerate();
             return response()->json([
-                'status' => 'success'
+                'status' => 'success',
             ]);
         }else{
             return response()->json([
