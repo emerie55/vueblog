@@ -1260,12 +1260,15 @@ select {
 .-mt-px {
 	margin-top: -1px;
 }
+<<<<<<< HEAD
 .mb-20 {
 	margin-bottom: 5rem;
 }
 .ml-8 {
 	margin-left: 2rem;
 }
+=======
+>>>>>>> c75c4d168833c2a9c1a0476011577fda5524ec99
 .mb-8 {
 	margin-bottom: 2rem;
 }

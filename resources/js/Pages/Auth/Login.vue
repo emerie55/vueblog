@@ -67,7 +67,8 @@ export default {
             axios.post(route('login'), formData)
             .then(res => {
                 if(res.data.status == 'success'){
-                    window.location.href = route('dashboard');
+                    localStorage.token = res.data.result.apitoken;
+                    this.$inertia.visit(route('dashboard'));
                 }else{
                     alert('An Error occured!')
                 }

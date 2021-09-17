@@ -44,10 +44,18 @@ class PageController extends Controller
             'password' => ['required', 'string'],
         ]);
 
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            $request->session()->regenerate();
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
+            if (!$request->has('endpoint')) {
+                $request->session()->regenerate();
+            }
+
+            $responses = [
+                'apitoken' => $request->user()->createToken('User Token')->plainTextToken
+            ];
             return response()->json([
-                'status' => 'success'
+                'status' => 'success',
+                'messages' => '',
+                'result' => $responses
             ]);
         }else{
             return response()->json([
@@ -73,9 +81,17 @@ class PageController extends Controller
             'password' => Hash::make($request->password),
         ])){
             if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-                $request->session()->regenerate();
+                if (!$request->has('endpoint')) {
+                    $request->session()->regenerate();
+                }
+    
+                $responses = [
+                    'apitoken' => $request->user()->createToken('User Token')->plainTextToken
+                ];
                 return response()->json([
-                    'status' => 'success'
+                    'status' => 'success',
+                    'messages' => '',
+                    'result' => $responses
                 ]);
             }else{
                 return response()->json([
@@ -89,5 +105,22 @@ class PageController extends Controller
             ]);
         }
 
+    }
+
+    public function delete_token(Request $request)
+    {
+        if ($request->user()->tokens()->delete()) {
+            return response()->json([
+                'status' => 'success',
+                'messages' => '',
+                'result' => []
+            ]);
+        }else{
+            return response()->json([
+                'status' => 'error',
+                'messages' => '',
+                'result' => []
+            ]);
+        }
     }
 }

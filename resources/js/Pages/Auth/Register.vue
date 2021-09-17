@@ -13,8 +13,8 @@
                         <font-awesome :icon="['far', 'user']" /> Lastname
                     </label>
                     <input type="text" id="lastname" :class="inputs" v-model="lastname">
-                    <div v-if="errors.lname.length > 0" :class="form_group" class="text-red-700 text-sm">
-                        {{ errors.lname[0] }}
+                    <div v-if="errors.lastname.length > 0" :class="form_group" class="text-red-700 text-sm">
+                        {{ errors.lastname[0] }}
                     </div>
                 </div>
                 <div :class="form_group">
@@ -97,7 +97,7 @@ export default {
             axios.post(route('register'), formData)
             .then(res => {
                 if(res.data.status == 'success'){
-                    window.location.href = route('dashboard');
+                    this.$inertia.visit(route('dashboard'));
                 }else{
                     alert('An Error occured!')
                 }
