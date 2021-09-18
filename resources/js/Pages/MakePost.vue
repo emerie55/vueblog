@@ -55,7 +55,8 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="capitalize block">Post Content</label>
-                                    <textarea :class="inputClass" v-model="post.content"></textarea>
+                                    <ckeditor :editor="editor" v-model="post.content" :config="editorConfig" :class="'h-96'"></ckeditor>
+                                    <!-- <textarea :class="inputClass" v-model="post.content"></textarea> -->
                                 </div>
                                 <div>
                                     <button :class="addBtn">
@@ -95,15 +96,15 @@
                                     <p>recent post</p>
                                 </div>
                             </div>
-                            <div class="h-20 rounded-xl border grid grid-cols-4 gap-4 my-4 p-2 shadow-lg" v-for="(post, i) in posts" :key="i" :value="post.id">
+                            <div class="h-auto rounded-xl border grid grid-cols-4 gap-4 my-4 p-2 shadow-lg" v-for="(post, i) in posts" :key="i" :value="post.id">
                                 <div class="col-span-1 overflow-hidden bg-gray-500 rounded-lg">
                                     
                                 </div>
-                                <div class="col-span-3 text-gray-800 flex justify-between items-center w-full h-full">
+                                <div class="col-span-3 text-gray-800 flex justify-between items-center w-full h-auto">
                                     <div>
-                                        <p class="text-lg capitalize font-bold">{{ post.title }}</p>
+                                        <p class="capitalize font-bold">{{ post.title }}</p>
                                         <div class="flex">
-                                            <p>{{ post.content }} </p> 
+                                            <!-- <p v-html="post.content" class="overflow-ellipsis overflow-hidden w-full"> </p>  -->
                                             <p class="text-sm ml-2 font-bold text-opacity-20 cursor-pointer">Read more ...</p>
                                         </div>
                                     </div>
@@ -129,6 +130,8 @@
 <script>
 import axios from 'axios'
 import WebLayout from '../Layouts/WebLayout.vue'
+import ClassicEditor  from '@ckeditor/ckeditor5-build-classic'
+
 export default {
     components: { WebLayout },
     data(){
@@ -145,6 +148,10 @@ export default {
                 content: '',
             }, 
             posts: [],
+            editor: ClassicEditor,
+            editorConfig:{
+                
+            }
         }
     },
     methods: {
@@ -243,5 +250,8 @@ export default {
 </script>
 
 <style>
-
+    .ck-editor__editable{
+        min-height: 250px;
+        max-height: 400px;
+    }
 </style>
