@@ -34363,7 +34363,50 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      isopen: false
+      isopen: false,
+      group_members: [{
+        img: 'img/sir.png',
+        name: 'Mr Destiny ',
+        email: 'destinybravos@gmail.com',
+        level: 'FullStack Web Developer',
+        smallText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, \n                                earum consequuntur tempore voluptatibus obcaecati magnam \n                                assumenda beatae voluptates natus, \n                                vitae itaque deserunt dolorem iusto facilis fugit \n                                accusamus molestias saepe dolores."
+      }, {
+        img: 'img/endless.jpg',
+        name: 'Mr Endless ',
+        email: 'Jcchi2004@yahoo.com',
+        level: 'Programmers CEO ',
+        smallText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, \n                                earum consequuntur tempore voluptatibus obcaecati magnam \n                                assumenda beatae voluptates natus, \n                                vitae itaque deserunt dolorem iusto facilis fugit \n                                accusamus molestias saepe dolores."
+      }, {
+        img: 'img/inno.jpg',
+        name: 'Mr Innocent ',
+        email: 'peterchigozirim@gmail.com',
+        level: 'FullStack Web Developer ',
+        smallText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, \n                                earum consequuntur tempore voluptatibus obcaecati magnam \n                                assumenda beatae voluptates natus, \n                                vitae itaque deserunt dolorem iusto facilis fugit \n                                accusamus molestias saepe dolores."
+      }, {
+        img: 'img/peter.jpg',
+        name: 'Mr Peter',
+        email: 'destinybravos@gmail.com',
+        level: 'FullStack Web Developer',
+        smallText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, \n                                earum consequuntur tempore voluptatibus obcaecati magnam \n                                assumenda beatae voluptates natus, \n                                vitae itaque deserunt dolorem iusto facilis fugit \n                                accusamus molestias saepe dolores."
+      }, {
+        img: 'img/ebube.jpg',
+        name: 'Ebube (Mr IQ)',
+        email: 'ebuberoderick@gmail.com',
+        level: 'FullStack Web Developer ',
+        smallText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, \n                                earum consequuntur tempore voluptatibus obcaecati magnam \n                                assumenda beatae voluptates natus, \n                                vitae itaque deserunt dolorem iusto facilis fugit \n                                accusamus molestias saepe dolores."
+      }, {
+        img: 'img/meenah.jpg',
+        name: 'Meenah',
+        email: 'Meenah-gurl@yahoo.com',
+        level: 'FullStack Web Developer ',
+        smallText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, \n                                earum consequuntur tempore voluptatibus obcaecati magnam \n                                assumenda beatae voluptates natus, \n                                vitae itaque deserunt dolorem iusto facilis fugit \n                                accusamus molestias saepe dolores."
+      }, {
+        img: 'img/willy.jpg',
+        name: 'Williams',
+        email: 'aspart5623y@gmail.com',
+        level: 'FullStack Web Developer ',
+        smallText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, \n                                earum consequuntur tempore voluptatibus obcaecati magnam \n                                assumenda beatae voluptates natus, \n                                vitae itaque deserunt dolorem iusto facilis fugit \n                                accusamus molestias saepe dolores."
+      }]
     };
   }
 });
@@ -35005,7 +35048,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      mydata: (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.usePage)().props.value.mydata
+      mydata: (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.usePage)().props.value.mydata,
+      img: 'img/cover.jpg',
+      img1: 'img/elc.jpg',
+      img2: 'img/ban.png',
+      text: 'Latest Fuel Price in Imo State'
     };
   }
 });
@@ -37730,188 +37777,44 @@ var _hoisted_17 = {
   key: 0,
   "class": ""
 };
-
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_18 = {
   "class": "grid lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 px-3 gap-4 mt-8 mb-8 mx-auto max-w-7xl"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " hover:animate-pulse col-span-1 min-h-50 w-72 bg-white-50 flex justify-self-center justify-center items-center pt-4 flex-col border rounded shadow-md hover:shadow-lg"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "img/sir.png",
-  alt: "",
-  "class": "h-28 w-28 rounded-full"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+};
+var _hoisted_19 = ["src"];
+var _hoisted_20 = {
   "class": " text-blue-700 font-bold "
-}, " Mr Destiny "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+};
+var _hoisted_21 = {
   "class": "text-gray-400 text-sm"
-}, " destinybravos@gmail.com "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+};
+var _hoisted_22 = {
   "class": "px-3 text-center text-sm "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+};
+var _hoisted_23 = {
   "class": "font-bold text-sm mb-6 "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+};
+var _hoisted_24 = {
   "class": "text-gray-600 "
-}, "Programmers CEO "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+};
+
+var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": " text-blue-700 p-0"
-}, "_________")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": " text-justify"
-}, " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, earum consequuntur tempore voluptatibus obcaecati magnam assumenda beatae voluptates natus, vitae itaque deserunt dolorem iusto facilis fugit accusamus molestias saepe dolores. ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-2 w-full py-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "bg-blue-900 w-full h-8 text-white"
-}, "Contact")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " hover:animate-pulse col-span-1 min-h-50 w-72 bg-white-50 flex justify-self-center justify-center items-center pt-4 flex-col border rounded shadow-md hover:shadow-lg"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "img/endless.jpg",
-  alt: "",
-  "class": "h-28 w-28 rounded-full"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 font-bold "
-}, " Mr Endless "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-gray-400 text-sm"
-}, " Jcchi2004@yahoo.com "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-3 text-center  text-sm "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "font-bold text-sm mb-6 "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "text-gray-600 "
-}, "FullStack Web Developer "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 p-0"
-}, "_________")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": " text-justify"
-}, " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, earum consequuntur tempore voluptatibus obcaecati magnam assumenda beatae voluptates natus, vitae itaque deserunt dolorem iusto facilis fugit accusamus molestias saepe dolores. ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-2 w-full py-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "bg-blue-900 w-full h-8 text-white"
-}, "Contact")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " hover:animate-pulse col-span-1 min-h-50 w-72 bg-white-50 flex justify-self-center justify-center items-center pt-4 flex-col border rounded shadow-md hover:shadow-lg"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "img/inno.jpg",
-  alt: "",
-  "class": "h-28 w-28 rounded-full"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 font-bold "
-}, " Mr Innocent "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-gray-400 text-sm"
-}, " emerie55@gmail.com "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-3 text-center text-sm "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "font-bold text-sm mb-6 "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "text-gray-600 "
-}, "FullStack Web Developer "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 m-0"
-}, "_________")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": " text-justify"
-}, " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, earum consequuntur tempore voluptatibus obcaecati magnam assumenda beatae voluptates natus, vitae itaque deserunt dolorem iusto facilis fugit accusamus molestias saepe dolores. ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-2 w-full py-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "bg-blue-900 w-full h-8 text-white"
-}, "Contact")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "hover:animate-pulse col-span-1 min-h-50 w-72 bg-white-50 flex justify-self-center justify-center items-center pt-4 flex-col border rounded shadow-md hover:shadow-lg"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "img/peter.jpg",
-  alt: "",
-  "class": "h-28 w-28 rounded-full"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 font-bold "
-}, " Mr Peter "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-gray-400 text-sm"
-}, " peterchigozirim@gmail.com "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-3 text-center text-sm "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "font-bold text-sm mb-6 "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "text-gray-600 "
-}, "FullStack Web Developer"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 p-0"
-}, "_________")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": " text-justify"
-}, " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, earum consequuntur tempore voluptatibus obcaecati magnam assumenda beatae voluptates natus, vitae itaque deserunt dolorem iusto facilis fugit accusamus molestias saepe dolores. ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-2 w-full py-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "bg-blue-900 w-full h-8 text-white"
-}, "Contact")])])], -1
+}, "_________", -1
 /* HOISTED */
 );
 
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "grid lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 px-3 gap-4 mt-8 mb-8 mx-auto max-w-7xl"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " col-span-1 min-h-50 w-72 bg-white-50 flex justify-center hover:animate-pulse justify-self-center items-center pt-4 flex-col border rounded shadow-md hover:shadow-lg"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "img/ebube.jpg",
-  alt: "",
-  "class": "h-28 w-28 rounded-full"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 font-bold "
-}, " Ebube (Mr IQ) "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-gray-400 text-sm"
-}, " ebuberoderick@gmail.com "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-3 text-center text-sm "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "font-bold text-sm mb-6 "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "text-gray-600 "
-}, "FullStack Web Developer "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 p-0"
-}, "_________")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_26 = {
   "class": " text-justify"
-}, " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, earum consequuntur tempore voluptatibus obcaecati magnam assumenda beatae voluptates natus, vitae itaque deserunt dolorem iusto facilis fugit accusamus molestias saepe dolores. ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+};
+
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "px-2 w-full py-3"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   "class": "bg-blue-900 w-full h-8 text-white"
-}, "Contact")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " hover:animate-pulse col-span-1 min-h-50 w-72 bg-white-50 flex justify-self-center justify-center items-center pt-4 flex-col border rounded shadow-md hover:shadow-lg"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "img/meenah.jpg",
-  alt: "",
-  "class": "h-28 w-28 rounded-full"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 font-bold "
-}, " Meenah "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-gray-400 text-sm"
-}, " Meenah-gurl@yahoo.com "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-3 text-center  text-sm "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "font-bold text-sm mb-6 "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "text-gray-600 "
-}, "FullStack Web Developer "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 p-0"
-}, "_________")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": " text-justify"
-}, " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, earum consequuntur tempore voluptatibus obcaecati magnam assumenda beatae voluptates natus, vitae itaque deserunt dolorem iusto facilis fugit accusamus molestias saepe dolores. ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-2 w-full py-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "bg-blue-900 w-full h-8 text-white"
-}, "Contact")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " hover:animate-pulse col-span-1 min-h-50 w-72 bg-white-50 flex justify-self-center justify-center items-center pt-4 flex-col border rounded shadow-md hover:shadow-lg"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "img/willy.jpg",
-  alt: "",
-  "class": "h-28 w-28 rounded-full"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 font-bold "
-}, " Williams "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-gray-400 text-sm"
-}, " aspart5623y@gmail.com "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-3 text-center text-sm "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "font-bold text-sm mb-6 "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "text-gray-600 "
-}, "FullStack Web Developer "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": " text-blue-700 m-0"
-}, "_________")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": " text-justify"
-}, " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, earum consequuntur tempore voluptatibus obcaecati magnam assumenda beatae voluptates natus, vitae itaque deserunt dolorem iusto facilis fugit accusamus molestias saepe dolores. ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "px-2 w-full py-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "bg-blue-900 w-full h-8 text-white"
-}, "Contact")])])], -1
+}, "Contact")], -1
 /* HOISTED */
 );
 
-var _hoisted_20 = [_hoisted_18, _hoisted_19];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_font_awesome = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("font-awesome");
 
@@ -37936,7 +37839,28 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           return $data.isopen = !$data.isopen;
         }),
         "class": "hover:bg-blue-900 text-blue-900 hover:transition duration-700 bg-white border border-blue-900 text-md hover:text-white py-1 px-2 rounded"
-      }, "Learn More..")])])]), $data.isopen == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_17, _hoisted_20)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])];
+      }, "Learn More..")])])]), $data.isopen == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.group_members, function (person, index) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+          key: index,
+          "class": " hover:animate-pulse col-span-1 min-h-50 w-72 bg-white-50 flex justify-self-center justify-center items-center pt-4 flex-col border rounded shadow-md hover:shadow-lg"
+        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+          src: person.img,
+          alt: "",
+          "class": "h-28 w-28 rounded-full"
+        }, null, 8
+        /* PROPS */
+        , _hoisted_19), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(person.name), 1
+        /* TEXT */
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(person.email), 1
+        /* TEXT */
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(person.level), 1
+        /* TEXT */
+        ), _hoisted_25]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(person.smallText), 1
+        /* TEXT */
+        )]), _hoisted_27]);
+      }), 128
+      /* KEYED_FRAGMENT */
+      ))])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])];
     }),
     _: 1
     /* STABLE */
@@ -39295,6 +39219,28 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
+var _hoisted_2 = {
+  "class": "h-56 "
+};
+var _hoisted_3 = {
+  "class": "grid grid-cols-1   md:grid-cols-3"
+};
+var _hoisted_4 = {
+  "class": "md:col-span-2 relative "
+};
+var _hoisted_5 = ["src"];
+var _hoisted_6 = ["id"];
+var _hoisted_7 = {
+  "class": " "
+};
+var _hoisted_8 = {
+  "class": " "
+};
+var _hoisted_9 = ["src"];
+var _hoisted_10 = {
+  "class": ""
+};
+var _hoisted_11 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_web_layout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("web-layout");
 
@@ -39303,15 +39249,30 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [_hoisted_1];
     }),
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.mydata, function (name, i) {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
-          key: i
-        }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(name), 1
-        /* TEXT */
-        );
-      }), 128
-      /* KEYED_FRAGMENT */
-      ))])];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+        src: $data.img,
+        alt: "",
+        "class": "w-full max-h-96 "
+      }, null, 8
+      /* PROPS */
+      , _hoisted_5), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+        "class": "text-xlg font-semibold absolute tracking-wider uppercase  pl-4 bottom-20 text-white",
+        id: $data.text
+      }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.text), 9
+      /* TEXT, PROPS */
+      , _hoisted_6)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+        src: $data.img1,
+        alt: "",
+        "class": " w-full max-h-48"
+      }, null, 8
+      /* PROPS */
+      , _hoisted_9)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+        src: $data.img2,
+        alt: "",
+        "class": "w-full max-h-48 "
+      }, null, 8
+      /* PROPS */
+      , _hoisted_11)])])])])];
     }),
     _: 1
     /* STABLE */
